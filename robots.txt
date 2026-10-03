@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://palmawork2025-cmyk.github.io/okinawa-mania/sitemap.xml
