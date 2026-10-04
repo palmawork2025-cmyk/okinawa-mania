@@ -16,7 +16,7 @@
   ============================================================
 -->
 <title>沖縄マニア｜沖縄で見つけた、ちょっと面白いもの</title>
-<meta name="description" content="沖縄マニアは、沖縄の街やお店で見つけた、珍しいもの・レトロなもの・ちょっと変わったものを紹介するショップです。沖縄雑貨や沖縄グッズ、沖縄で見つけた面白いものをオンラインSHOPでお届けします。">
+<meta name="description" content="沖縄をうろうろして見つけた、ちょっと面白いものを集めています。商店のすみっこの缶や瓶、手描きの看板、昔ながらのパッケージなど、観光みやげじゃないほうの沖縄雑貨・沖縄グッズを紹介・販売しています。">
 <meta name="theme-color" content="#2F4B3C">
 <link rel="canonical" href="https://palmawork2025-cmyk.github.io/okinawa-mania/">
 
@@ -24,7 +24,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="沖縄マニア">
 <meta property="og:title" content="沖縄マニア｜沖縄で見つけた、ちょっと面白いもの">
-<meta property="og:description" content="沖縄の街やお店で見つけた、珍しいもの・レトロなもの・ちょっと変わったもの。次は何が見つかるか、お楽しみに。">
+<meta property="og:description" content="観光みやげじゃないほうの沖縄。商店のすみっこや路地裏で見つけた、ちょっと面白いものを集めています。">
 <meta property="og:url" content="https://palmawork2025-cmyk.github.io/okinawa-mania/">
 <meta property="og:image" content="https://palmawork2025-cmyk.github.io/okinawa-mania/images/okinawa-mania-ogp.jpg">
 <meta property="og:image:width" content="1200">
@@ -46,7 +46,7 @@
 <!-- 見出し用フォント（本文は端末標準フォントで軽量に） -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Shippori+Mincho+B1:wght@700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -348,6 +348,77 @@ ul { padding: 0; list-style: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ============================================================
+   手作り感の調整（きれいすぎる部分をわざと崩しています）
+   ============================================================ */
+:root { --font-hand: "Klee One", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif; }
+body { letter-spacing: .02em; }
+.sec-title, .hero-copy, .item-name, .found-card h3, .shop-name { font-family: var(--font-hand); font-weight: 600; letter-spacing: .02em; }
+.sec-title { font-size: clamp(1.55rem, 6.2vw, 2.2rem); }
+.sec-label { font-family: var(--font-hand); font-size: 1rem; letter-spacing: .04em; text-decoration: underline wavy; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+.sec-label::before { display: none; }
+.center { text-align: left; }
+.center .sec-lead { margin-inline: 0; }
+.more { text-align: left; }
+.insta-cta { text-align: left; }
+
+/* ボタン：ぬるっとした丸ボタン → 手で切ったラベルっぽく */
+.btn { border-radius: 3px; letter-spacing: .04em; box-shadow: 3px 3px 0 var(--ink); }
+.btn-primary:hover, .btn-light:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 var(--ink); }
+.btn-ghost { box-shadow: 3px 3px 0 var(--green); }
+.btn-light { box-shadow: 3px 3px 0 rgba(0,0,0,.45); }
+.header-shop { box-shadow: 2px 2px 0 var(--ink); }
+.item-link { border-radius: 3px; justify-content: flex-start; padding-inline: 12px; border-style: dashed; }
+.footer-links a { border-radius: 3px; }
+
+/* マーカー線 */
+.marker { background: linear-gradient(transparent 62%, rgba(200,150,62,.42) 62%, rgba(200,150,62,.42) 90%, transparent 90%); padding: 0 2px; }
+
+/* ヒーロー：マステで貼った写真＋付せん */
+.hero-frame { border-radius: 2px; rotate: -1deg; box-shadow: 0 10px 24px -16px rgba(42,36,30,.55); position: relative; }
+.hero-frame::before, .hero-frame::after { content: ""; position: absolute; width: 84px; height: 24px; background: rgba(200,150,62,.5); z-index: 2; }
+.hero-frame::before { left: -14px; top: 10px; rotate: -38deg; }
+.hero-frame::after { right: -12px; top: 6px; rotate: 33deg; background: rgba(77,107,128,.38); }
+.hero-note { position: absolute; right: 10px; bottom: -26px; z-index: 3; background: #F1DFA0; color: var(--ink); padding: 10px 14px 12px; font-family: var(--font-hand); font-size: .82rem; line-height: 1.5; rotate: 4deg; box-shadow: 2px 4px 8px rgba(42,36,30,.18); }
+.hero-copy { font-size: clamp(1.4rem, 6vw, 2.1rem); line-height: 1.6; }
+@media (min-width: 900px) {
+  .hero-frame { transform: none; rotate: 1.2deg; }
+  .hero-note { left: -26px; right: auto; bottom: -30px; font-size: .95rem; rotate: -5deg; }
+}
+
+/* ABOUT */
+.about-photo img { border-radius: 2px; rotate: -.8deg; }
+.memo { margin-top: 1.6em; display: inline-block; font-family: var(--font-hand); color: var(--red); font-size: 1.05rem; rotate: -1.2deg; }
+.memo::before { content: "→ "; }
+
+/* 発掘品：少しだけ傾いた紙のカード */
+.item-card { border-radius: 2px; box-shadow: 1px 2px 0 rgba(42,36,30,.12); border: 1px solid var(--line); }
+.item-card:nth-child(4n+1) { rotate: -.6deg; }
+.item-card:nth-child(4n+2) { rotate: .5deg; }
+.item-card:nth-child(4n+3) { rotate: .2deg; }
+.item-card:nth-child(4n) { rotate: -.4deg; }
+.item-no { font-family: var(--font-hand); font-size: .8rem; letter-spacing: .02em; border-radius: 0; }
+.item-desc { font-size: .85rem; }
+
+/* 見つけたもの：手書きメモ風キャプション＋マステ */
+.found-card figure::before { content: ""; position: absolute; left: 50%; top: -9px; width: 64px; height: 20px; translate: -50% 0; background: rgba(200,150,62,.5); z-index: 1; rotate: -4deg; }
+.found-card:nth-child(even) figure::before { background: rgba(164,75,59,.32); rotate: 5deg; }
+.found-card:nth-child(odd) img { transform: rotate(-1.6deg); }
+.found-card:nth-child(even) img { transform: rotate(1.3deg); }
+.found-file { font-family: var(--font-hand); font-size: .85rem; letter-spacing: .02em; }
+.found-card p { font-family: var(--font-hand); font-size: .9rem; color: var(--ink); line-height: 1.7; }
+
+/* Instagram：グリッドを少しラフに */
+.insta-grid { margin: 0; gap: 6px; }
+.insta-id { font-family: var(--font-hand); }
+
+/* SHOP */
+.shop-box { text-align: left; }
+.shop-box::before, .shop-box::after { display: none; }
+.shop-actions { align-items: flex-start; }
+.shop-section .sec-label { color: #E2BF7A; }
+.copyright { letter-spacing: .04em; }
 </style>
 <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -389,21 +460,20 @@ ul { padding: 0; list-style: none; }
              width="1408" height="768" fetchpriority="high"
              alt="沖縄の路地裏にある古い店先。花ブロックの壁の横、半分開いたシャッターの奥の棚に、古い缶や瓶、やちむんの器が並んでいる">
       </figure>
-      <p class="hero-stamp" aria-hidden="true">発掘中<small>DIGGING</small></p>
+      <p class="hero-note" aria-hidden="true">ゆるく更新中です<br>（たぶん週1くらい）</p>
     </div>
     <div class="hero-text">
       <h1 class="hero-title">
         <span class="hero-brand"><img src="images/okinawa-mania-logo.webp" width="1200" height="408" alt="沖縄マニア OKINAWA SELECT"></span>
-        <span class="hero-copy">沖縄で見つけた、<br>ちょっと面白いもの。</span>
+        <span class="hero-copy">沖縄で見つけた、<br><span class="marker">ちょっと面白いもの。</span></span>
       </h1>
-      <p class="hero-lead">街角や小さなお店で出会った、珍しいもの、変わったもの、思わず集めたくなるもの。観光みやげとはひと味ちがう「沖縄の掘り出しもの」を探しています。</p>
+      <p class="hero-lead">観光みやげじゃないほうの沖縄。商店の棚のすみっことか、路地の看板とか、昔からありそうなパッケージとか。気になったものを、ひとつずつ集めてます。</p>
       <div class="hero-cta">
         <a class="btn btn-primary ext" href="https://okinawamania.official.ec/" data-link="shop" target="_blank" rel="noopener">SHOPを見る</a>
-        <a class="text-link" href="#items">今回の発掘品 ↓</a>
+        <a class="text-link" href="#items">最近見つけたもの ↓</a>
       </div>
     </div>
   </div>
-  <a class="scroll-cue" href="#about">SCROLL</a>
 </section>
 
 <!-- ============ 2. 沖縄マニアについて ============ -->
@@ -418,18 +488,14 @@ ul { padding: 0; list-style: none; }
     </div>
     <div class="about-text reveal">
       <div class="sec-head" style="margin-bottom:24px">
-        <p class="sec-label">ABOUT</p>
+        <p class="sec-label">about</p>
         <h2 class="sec-title" id="about-title">沖縄マニアについて</h2>
       </div>
-      <p>沖縄には、まだあまり知られていない面白いものがたくさんあります。</p>
-      <p>観光地のおみやげではなく、沖縄の街角や小さなお店で見つけた、ちょっと変わったもの、珍しいもの、思わず手に取りたくなるもの。</p>
-      <p>沖縄マニアは、そんな「沖縄の掘り出しもの」を探して集めています。沖縄に詳しくなくても大丈夫。「なんか面白い」と感じてもらえたら、それで十分です。</p>
-      <p class="sign">次は何が見つかるか、お楽しみに。</p>
-      <ol class="steps" aria-label="沖縄マニアの楽しみ方">
-        <li><b>01</b>沖縄の街やお店を歩いて、探す</li>
-        <li><b>02</b>気になったものを、見つけて集める</li>
-        <li><b>03</b>SHOPから、お届けする</li>
-      </ol>
+      <p>はじめまして、沖縄マニアです。</p>
+      <p>沖縄をうろうろしていると、気になるものによく出会います。商店の奥で色があせた缶とか、誰が描いたのかわからない手描きの看板とか。</p>
+      <p>有名な観光地のものじゃなくて、そういう「なんかいいな」と思ったものを集めて、ここで紹介しています。</p>
+      <p>正直、役に立つものばかりじゃないです。でも、見てるとちょっと楽しい。そういうのが好きな人に届いたらうれしいです。</p>
+      <p class="memo">次に何が出てくるかは、自分でもよくわかってません。</p>
     </div>
   </div>
 </section>
@@ -437,11 +503,11 @@ ul { padding: 0; list-style: none; }
 <!-- ============ 3. 今回の発掘品（PICK UP） ============ -->
 <section class="section items-section" id="items" aria-labelledby="items-title">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <p class="sec-label">PICK UP</p>
+    <div class="sec-head reveal">
+      <p class="sec-label">pick up</p>
       <h2 class="sec-title" id="items-title">今回の発掘品</h2>
-      <p class="sec-lead">沖縄で見つけた、ちょっと気になるものたち。<br class="pc-br">くわしい商品情報は、SHOPでご覧いただけます。</p>
-      <p class="note">※現在の画像は、沖縄マニアの世界観を表すイメージ画像です。実際の商品・価格・在庫はSHOPでご確認ください。</p>
+      <p class="sec-lead">最近見つけて、いいなと思ったもの。<br class="pc-br">くわしいことはSHOPのほうに書いてます。</p>
+      <p class="note">※いまのせている写真はイメージです。実物の写真・値段・在庫はSHOPで見てください。</p>
     </div>
 
     <div class="item-grid">
@@ -457,11 +523,11 @@ ul { padding: 0; list-style: none; }
       <article class="item-card reveal">
         <div class="item-media">
           <img src="images/okinawa-found-item-01-480.webp" srcset="images/okinawa-found-item-01-480.webp 480w, images/okinawa-found-item-01.webp 768w" sizes="(min-width: 1120px) 340px, (min-width: 700px) 30vw, 46vw" width="768" height="768" loading="lazy" decoding="async" alt="古い木の棚に並ぶ、赤と青のラベルの色褪せたブリキ缶">
-          <span class="item-no">No.01</span><span class="item-tag">イメージ</span>
+          <span class="item-no">no.1</span><span class="item-tag">イメージ</span>
         </div>
         <div class="item-body">
           <h3 class="item-name">レトロな缶もの</h3>
-          <p class="item-desc">ラベルのデザインに惹かれて、つい手に取ってしまう缶もの。</p>
+          <p class="item-desc">色あせた感じのラベルがいい。中身より缶のほうがほしくなるやつ。</p>
           <a class="item-link" href="https://okinawamania.official.ec/" data-link="shop" target="_blank" rel="noopener">SHOPで見る<span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -469,11 +535,11 @@ ul { padding: 0; list-style: none; }
       <article class="item-card reveal">
         <div class="item-media">
           <img src="images/okinawa-found-item-02-480.webp" srcset="images/okinawa-found-item-02-480.webp 480w, images/okinawa-found-item-02.webp 768w" sizes="(min-width: 1120px) 340px, (min-width: 700px) 30vw, 46vw" width="768" height="768" loading="lazy" decoding="async" alt="緑・琥珀色・淡いピンクの古いガラス瓶">
-          <span class="item-no">No.02</span><span class="item-tag">イメージ</span>
+          <span class="item-no">no.2</span><span class="item-tag">イメージ</span>
         </div>
         <div class="item-body">
           <h3 class="item-name">ガラスの瓶</h3>
-          <p class="item-desc">光にかざしたくなる、色とかたちが気になる瓶たち。</p>
+          <p class="item-desc">窓ぎわに置いとくと、光がきれい。それだけでけっこう満足。</p>
           <a class="item-link" href="https://okinawamania.official.ec/" data-link="shop" target="_blank" rel="noopener">SHOPで見る<span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -481,11 +547,11 @@ ul { padding: 0; list-style: none; }
       <article class="item-card reveal">
         <div class="item-media">
           <img src="images/okinawa-found-item-03-480.webp" srcset="images/okinawa-found-item-03-480.webp 480w, images/okinawa-found-item-03.webp 768w" sizes="(min-width: 1120px) 340px, (min-width: 700px) 30vw, 46vw" width="768" height="768" loading="lazy" decoding="async" alt="素朴な絵付けのやちむんの碗が二つ">
-          <span class="item-no">No.03</span><span class="item-tag">イメージ</span>
+          <span class="item-no">no.3</span><span class="item-tag">イメージ</span>
         </div>
         <div class="item-body">
           <h3 class="item-name">器・焼きもの</h3>
-          <p class="item-desc">ぽってりとした形と素朴な絵付けが、毎日の食卓になじむ器。</p>
+          <p class="item-desc">ぽてっとしたかたちに、ゆるい絵付け。手にのせると、なんか落ち着く。</p>
           <a class="item-link" href="https://okinawamania.official.ec/" data-link="shop" target="_blank" rel="noopener">SHOPで見る<span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -493,11 +559,11 @@ ul { padding: 0; list-style: none; }
       <article class="item-card reveal">
         <div class="item-media">
           <img src="images/okinawa-found-item-04-480.webp" srcset="images/okinawa-found-item-04-480.webp 480w, images/okinawa-found-item-04.webp 768w" sizes="(min-width: 1120px) 340px, (min-width: 700px) 30vw, 46vw" width="768" height="768" loading="lazy" decoding="async" alt="幾何学模様の紙箱とマッチ箱を重ねたもの">
-          <span class="item-no">No.04</span><span class="item-tag">イメージ</span>
+          <span class="item-no">no.4</span><span class="item-tag">イメージ</span>
         </div>
         <div class="item-body">
           <h3 class="item-name">紙もの・ラベル</h3>
-          <p class="item-desc">パッケージや包み紙など、なぜか捨てられない紙もの。</p>
+          <p class="item-desc">マッチ箱とか包み紙とか。捨てられなくて、ついとっておくやつ。</p>
           <a class="item-link" href="https://okinawamania.official.ec/" data-link="shop" target="_blank" rel="noopener">SHOPで見る<span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -505,11 +571,11 @@ ul { padding: 0; list-style: none; }
       <article class="item-card reveal">
         <div class="item-media">
           <img src="images/okinawa-found-item-05-480.webp" srcset="images/okinawa-found-item-05-480.webp 480w, images/okinawa-found-item-05.webp 768w" sizes="(min-width: 1120px) 340px, (min-width: 700px) 30vw, 46vw" width="768" height="768" loading="lazy" decoding="async" alt="星のマークが入った、角の欠けたホーロー看板">
-          <span class="item-no">No.05</span><span class="item-tag">イメージ</span>
+          <span class="item-no">no.5</span><span class="item-tag">イメージ</span>
         </div>
         <div class="item-body">
           <h3 class="item-name">看板・プレート</h3>
-          <p class="item-desc">部屋に飾りたくなる、昭和レトロな雰囲気の看板もの。</p>
+          <p class="item-desc">角がちょっと欠けてるのも味。壁に立てかけておくだけで、いい感じ。</p>
           <a class="item-link" href="https://okinawamania.official.ec/" data-link="shop" target="_blank" rel="noopener">SHOPで見る<span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -517,11 +583,11 @@ ul { padding: 0; list-style: none; }
       <article class="item-card reveal">
         <div class="item-media">
           <img src="images/okinawa-found-item-06-480.webp" srcset="images/okinawa-found-item-06-480.webp 480w, images/okinawa-found-item-06.webp 768w" sizes="(min-width: 1120px) 340px, (min-width: 700px) 30vw, 46vw" width="768" height="768" loading="lazy" decoding="async" alt="赤瓦の家などが写った古い絵はがきと切手">
-          <span class="item-no">No.06</span><span class="item-tag">イメージ</span>
+          <span class="item-no">no.6</span><span class="item-tag">イメージ</span>
         </div>
         <div class="item-body">
           <h3 class="item-name">絵はがき・切手</h3>
-          <p class="item-desc">集めて眺めるのが楽しい、沖縄らしい図柄の紙もの。</p>
+          <p class="item-desc">沖縄っぽい風景のはがき。眺めてると、けっこう時間がたつ。</p>
           <a class="item-link" href="https://okinawamania.official.ec/" data-link="shop" target="_blank" rel="noopener">SHOPで見る<span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -529,7 +595,7 @@ ul { padding: 0; list-style: none; }
     </div>
 
     <div class="more reveal">
-      <a class="btn btn-primary ext" href="https://okinawamania.official.ec/" data-link="shop" target="_blank" rel="noopener">SHOPで全商品を見る</a>
+      <a class="btn btn-primary ext" href="https://okinawamania.official.ec/" data-link="shop" target="_blank" rel="noopener">ほかのもSHOPにあります</a>
     </div>
   </div>
 </section>
@@ -538,47 +604,47 @@ ul { padding: 0; list-style: none; }
 <section class="section" id="found" aria-labelledby="found-title">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="sec-label">FOUND IN OKINAWA</p>
+      <p class="sec-label">found in okinawa</p>
       <h2 class="sec-title" id="found-title">沖縄で見つけたもの</h2>
-      <p class="sec-lead">売りものではないけれど、思わず足を止めてしまったもの。沖縄マニアが街で出会った「気になるもの」の記録です。</p>
+      <p class="sec-lead">売りものじゃないけど、つい足が止まったもの。見つけたら、とりあえず写真を撮ってます。</p>
     </div>
     <div class="found-grid">
       <article class="found-card reveal">
         <figure><img src="images/okinawa-found-sign-480.webp" srcset="images/okinawa-found-sign-480.webp 480w, images/okinawa-found-sign.webp 614w" sizes="(min-width: 900px) 25vw, 46vw" width="614" height="768" loading="lazy" decoding="async" alt="路地裏のブロック塀に重ねて掛けられた、色褪せた古い商店の看板と鉢植え"></figure>
-        <span class="found-file">FILE 01</span>
+        <span class="found-file">メモ 01</span>
         <h3>街角の手描き看板</h3>
-        <p>何度も塗り直された跡まで、味になっている。</p>
+        <p>何屋さんだったのか、もうよくわからない。でも、この色の重なり方がすき。</p>
       </article>
       <article class="found-card reveal">
         <figure><img src="images/okinawa-found-package-480.webp" srcset="images/okinawa-found-package-480.webp 480w, images/okinawa-found-package.webp 614w" sizes="(min-width: 900px) 25vw, 46vw" width="614" height="768" loading="lazy" decoding="async" alt="商店の棚に置かれた、幾何学模様のレトロなパッケージの紙箱"></figure>
-        <span class="found-file">FILE 02</span>
+        <span class="found-file">メモ 02</span>
         <h3>ローカルなパッケージ</h3>
-        <p>昔から変わらないデザインに、つい見入ってしまう。</p>
+        <p>商店の棚でこういう箱を見つけると、ついじっと見ちゃう。</p>
       </article>
       <article class="found-card reveal">
         <figure><img src="images/okinawa-found-arcade-480.webp" srcset="images/okinawa-found-arcade-480.webp 480w, images/okinawa-found-arcade.webp 614w" sizes="(min-width: 900px) 25vw, 46vw" width="614" height="768" loading="lazy" decoding="async" alt="シャッターが続く商店街のアーケードに下がる看板と、止められた自転車"></figure>
-        <span class="found-file">FILE 03</span>
+        <span class="found-file">メモ 03</span>
         <h3>商店街のアーケード</h3>
-        <p>少しだけ時間が止まったような、看板の続く通り。</p>
+        <p>シャッターが閉まってる時間帯の商店街、ちょっと別の世界っぽい。</p>
       </article>
       <article class="found-card reveal">
         <figure><img src="images/okinawa-found-blocks-480.webp" srcset="images/okinawa-found-blocks-480.webp 480w, images/okinawa-found-blocks.webp 614w" sizes="(min-width: 900px) 25vw, 46vw" width="614" height="768" loading="lazy" decoding="async" alt="花ブロックの塀の上に座る黒猫と、赤い郵便受け、鉢植え"></figure>
-        <span class="found-file">FILE 04</span>
+        <span class="found-file">メモ 04</span>
         <h3>花ブロックの塀</h3>
-        <p>沖縄の家でよく見かける透かしブロック。猫の特等席。</p>
+        <p>沖縄の家でよく見る透かしブロック。猫がいたら、その日はラッキー。</p>
       </article>
     </div>
-    <p class="note reveal">※画像はイメージです。実際に見つけたものは、Instagramで記録しています。</p>
+    <p class="note reveal">※ここの写真はイメージです。ほんとに見つけたものは、Instagramにのせてます。</p>
   </div>
 </section>
 
 <!-- ============ 5. Instagram ============ -->
 <section class="section insta-section" id="instagram" aria-labelledby="insta-title">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <p class="sec-label">INSTAGRAM</p>
+    <div class="sec-head reveal">
+      <p class="sec-label">instagram</p>
       <h2 class="sec-title" id="insta-title">沖縄マニアの発掘記録</h2>
-      <p class="sec-lead">沖縄で見つけた、気になるものを日々記録しています。<br class="pc-br">新しい発掘品のお知らせも、Instagramから。</p>
+      <p class="sec-lead">見つけたものは、だいたいInstagramに先にのせてます。<br class="pc-br">新しく入ったものも、こっちでお知らせします。</p>
     </div>
     <ul class="insta-grid reveal">
       <li><a href="https://www.instagram.com/okinawamania.shop/" data-link="instagram" target="_blank" rel="noopener"><img src="images/okinawa-found-sign-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Instagramの投稿イメージ：手描き看板"></a></li>
@@ -599,12 +665,12 @@ ul { padding: 0; list-style: none; }
 <section class="section shop-section" id="shop" aria-labelledby="shop-title">
   <div class="wrap">
     <div class="shop-box reveal">
-      <p class="sec-label">ONLINE SHOP</p>
+      <p class="sec-label">shop</p>
       <h2 class="sec-title" id="shop-title"><span class="shop-name">SHOP 沖縄マニア</span></h2>
-      <p class="sec-lead" style="margin-inline:auto">気になるものが見つかったら、SHOPをのぞいてみてください。<br class="pc-br">新しい発掘品も、少しずつ追加していきます。</p>
+      <p class="sec-lead" style="margin-inline:auto">気になるものがあったら、SHOPものぞいてみてください。<br class="pc-br">見つけたものから、少しずつ並べていきます（のんびりですが）。</p>
       <div class="shop-actions">
         <a class="btn btn-light ext" href="https://okinawamania.official.ec/" data-link="shop" target="_blank" rel="noopener">購入はこちら</a>
-        <span class="shop-sub">ご購入・お支払いは公式オンラインショップで行います</span>
+        <span class="shop-sub">お買いものはオンラインショップからどうぞ</span>
       </div>
     </div>
   </div>
@@ -614,15 +680,15 @@ ul { padding: 0; list-style: none; }
 <section class="section" id="info" aria-labelledby="info-title">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="sec-label">SHOP INFO</p>
+      <p class="sec-label">shop info</p>
       <h2 class="sec-title" id="info-title">ショップについて</h2>
     </div>
     <dl class="info-list reveal">
       <div><dt>ショップ名</dt><dd>沖縄マニア</dd></div>
-      <div><dt>取り扱い</dt><dd>沖縄で見つけた、ちょっと面白いもの（雑貨・グッズなど）</dd></div>
+      <div><dt>あつかってるもの</dt><dd>沖縄で見つけた、ちょっと面白いもの（雑貨とかグッズとか）</dd></div>
       <div><dt>販売方法</dt><dd>公式オンラインショップ（<a href="https://okinawamania.official.ec/" data-link="shop" target="_blank" rel="noopener">SHOP</a>）</dd></div>
-      <div><dt>お支払い・配送</dt><dd>SHOPの各商品ページをご確認ください</dd></div>
-      <div><dt>お問い合わせ</dt><dd>SHOPのお問い合わせフォーム、または<a href="https://www.instagram.com/okinawamania.shop/" data-link="instagram" target="_blank" rel="noopener">Instagram</a>のDMからどうぞ</dd></div>
+      <div><dt>お支払い・配送</dt><dd>SHOPの商品ページに書いてあります</dd></div>
+      <div><dt>お問い合わせ</dt><dd>SHOPのお問い合わせフォームか、<a href="https://www.instagram.com/okinawamania.shop/" data-link="instagram" target="_blank" rel="noopener">Instagram</a>のDMで気軽にどうぞ。返事はちょっと遅いかもです。</dd></div>
       <div><dt>特定商取引法に基づく表記</dt><dd>SHOP内に掲載しています</dd></div>
     </dl>
   </div>
@@ -648,7 +714,7 @@ ul { padding: 0; list-style: none; }
         </div>
       </div>
     </div>
-    <p class="copyright">&copy; <span id="year">2026</span> 沖縄マニア</p>
+    <p class="copyright">&copy; <span id="year">2026</span> 沖縄マニア　／　ゆるく更新中</p>
   </div>
 </footer>
 
